@@ -1,0 +1,45 @@
+.cart {
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.front, .back {
+    background-color: #077070;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.9s linear;
+    border-radius: 5px;
+}
+
+.back {
+    background-color: #8a0000;
+    transform: perspective(45vw) rotateY(180deg);
+}
+
+.front {
+    transform: perspective(45vw) rotateY(0deg);
+}
+
+.cart:hover > .front {
+    transform: perspective(45vw) rotateY(-180deg);
+}
+
+.cart:hover > .back {
+    transform: perspective(45vw) rotateY(0deg);
+}
+
+.vote-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #860000;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
